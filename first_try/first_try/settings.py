@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     # thried party apps
 
     #own apps
-    'polls',    
+    'polls',
+    'adi',   
 ]
 
 MIDDLEWARE = [
