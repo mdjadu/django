@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <title>my django projest</title>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        {% include 'nave_bar.html' %}
+        <h2> this is common </h2>
+        {% block cont %}
+        replacing me 
+        {% endblock %}
+
+        <!-- {% block kp %}
+        kp block
+        {% endblock %} -->
+    </body>
+</html>

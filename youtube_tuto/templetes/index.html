@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block cont %}
+<h1> hello this is templete </h1>
+{% endblock %}
+
+{% block kp %}
+<p>good luck</p>
+
+
+<p>
+{{ text }}
+</p>
+
+<p>
+    {{ number }}
+</p>
+
+<p>
+    {% for i in list %}
+    <li> {{ forloop.counter }} - {{ i }}</li>
+    {% endfor %}
+</p>
+
+<!-- include,extends,forloop are all template tags -->
+<!-- add is a filter -->
+
+<p>
+    {% for i in list %}
+        {% if i == 'abc' %}
+            <li>{{ forloop.counter }}- its a string "{{ i }}"</li> 
+        {% elif i == 23 %}
+            <li>{{ forloop.counter }} - {{ i|add:"0232" }}</li>
+        {% else %}
+            <li>{{ forloop.counter }} - {{ i }}</li>
+        {% endif %}
+        
+    {% endfor %}
+</p>
+{% endblock %}
+

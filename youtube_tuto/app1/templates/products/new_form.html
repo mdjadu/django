@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block cont %}
+
+<!-- this is one way to do but get is unsafe  -->
+<!-- <form action="http://www.google.com/search" method="GET">
+    <input type="text" name="q" placeholder="your search" />
+    <input type="submit" value="save" />
+
+</form> -->
+
+<form action="." method="POST"> {% csrf_token %}
+    <input type="text" name="title" placeholder="your search" />
+    <input type="submit" value="save" />
+
+</form>
+{% endblock %}
